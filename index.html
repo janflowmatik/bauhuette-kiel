@@ -37,17 +37,17 @@
 
   <style>
     :root {
-      --stone:       #1c1c1c;
-      --stone-mid:   #3a3a3a;
-      --stone-light: #6e6e6e;
-      --sand:        #c8c0b8;
-      --sand-soft:   #e2ddd8;
-      --sand-pale:   #edebe8;
-      --cream:       #f5f3f0;
-      --gold:        #a03d10;
-      --gold-light:  #c45218;
+      --stone:       #1a1f2e;
+      --stone-mid:   #2e3650;
+      --stone-light: #6878a0;
+      --sand:        #a8b4cc;
+      --sand-soft:   #d0d8e8;
+      --sand-pale:   #e8ecf4;
+      --cream:       #f2f4f8;
+      --gold:        #1a3a6e;
+      --gold-light:  #2558a8;
       --white:       #ffffff;
-      --shadow:      rgba(28,28,28,0.12);
+      --shadow:      rgba(20,26,46,0.14);
       --nav-h:       105px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -63,9 +63,9 @@
     /* ─── NAVBAR ─── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(28,28,28,0.97);
+      background: rgba(18,24,42,0.97);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(160,61,16,0.35);
+      border-bottom: 1px solid rgba(26,58,110,0.35);
     }
     .nav-top {
       display: grid;
@@ -90,12 +90,12 @@
       font-family: 'Jost', sans-serif;
       font-size: 0.78rem; font-weight: 400;
       letter-spacing: 0.14em; text-transform: uppercase;
-      color: rgba(208,200,192,0.7);
+      color: rgba(255,255,255,0.92);
       padding: 0.6rem 1.1rem;
       text-decoration: none;
       transition: color 0.2s; white-space: nowrap;
     }
-    .tab-btn:hover { color: var(--sand); }
+    .tab-btn:hover { color: #ffffff; }
     /* Hamburger */
     .nav-burger {
       display: none; flex-direction: column;
@@ -114,8 +114,8 @@
     /* Mobile dropdown */
     .nav-mobile {
       display: none; flex-direction: column;
-      background: rgba(28,28,28,0.98);
-      border-top: 1px solid rgba(160,61,16,0.25);
+      background: rgba(18,24,42,0.98);
+      border-top: 1px solid rgba(26,58,110,0.2);
       padding: 0.5rem 0 1rem;
     }
     .nav-mobile.open { display: flex; }
@@ -129,7 +129,7 @@
       transition: color 0.2s, background 0.2s;
     }
     .nav-mobile a:last-child { border-bottom: none; }
-    .nav-mobile a:hover { color: var(--sand); background: rgba(160,61,16,0.1); }
+    .nav-mobile a:hover { color: var(--sand); background: rgba(26,58,110,0.08); }
     @media (max-width: 700px) {
       .tab-bar { display: none; }
       .nav-burger { display: flex; }
@@ -151,12 +151,12 @@
     }
     .hero-bg::after {
       content: ""; position: absolute; inset: 0; z-index: 1;
-      background: rgba(15,12,10,0.75);
+      background: rgba(8,12,28,0.78);
     }
     .hero-inner { position: relative; z-index: 2; max-width: 780px; }
     .hero-eyebrow {
       font-size: 0.78rem; letter-spacing: 0.3em;
-      text-transform: uppercase; color: #e07840; margin-bottom: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      text-transform: uppercase; color: #7aa0d4; margin-bottom: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
     h1.hero-title {
       font-family: 'Cormorant Garamond', serif;
@@ -166,10 +166,10 @@
     }
     .hero-tagline {
       font-size: 0.88rem; letter-spacing: 0.22em;
-      text-transform: uppercase; color: rgba(230,215,195,0.9); margin-bottom: 2.8rem; text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+      text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 2.8rem; text-shadow: 0 1px 6px rgba(0,0,0,0.5);
       display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem;
     }
-    .hero-tagline span { margin: 0 0.5rem; color: var(--gold); }
+    .hero-tagline span { margin: 0 0.5rem; color: rgba(255,255,255,0.4); }
     .hero-cta {
       display: inline-block; padding: 0.9rem 2.4rem;
       background: var(--gold); color: white;
@@ -190,15 +190,15 @@
     }
     .banner-item {
       display: flex; align-items: center; gap: 0.5rem;
-      font-size: 0.92rem; color: rgba(237,228,215,0.85);
+      font-size: 0.92rem; color: rgba(255,255,255,0.65);
     }
     .banner-label {
       font-size: 0.72rem; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--gold-light);
+      text-transform: uppercase; color: #ffffff; font-weight: 700;
     }
-    .banner-sep { width: 1px; height: 1.1rem; background: rgba(255,255,255,0.15); }
-    .banner-item a { color: var(--sand-soft); text-decoration: none; transition: color 0.2s; }
-    .banner-item a:hover { color: white; }
+    .banner-sep { width: 1px; height: 1.1rem; background: rgba(255,255,255,0.2); }
+    .banner-item a { color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+    .banner-item a:hover { color: #ffffff; }
 
     /* ─── SECTIONS SHARED ─── */
     .section-inner {
@@ -207,7 +207,7 @@
     }
     .section-label {
       font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.6rem;
+      color: var(--stone); font-weight: 700; margin-bottom: 0.6rem;
     }
     .section-title {
       font-family: 'Cormorant Garamond', serif;
@@ -292,11 +292,13 @@
     }
     .form-input, .form-textarea {
       width: 100%; padding: 0.8rem 1rem;
-      border: 1px solid var(--sand-soft); border-radius: 2px;
-      background: var(--cream); font-family: 'Jost', sans-serif;
-      font-size: 1.0rem; color: var(--stone); outline: none; transition: border-color 0.2s;
+      border: none; border-radius: 2px;
+      background: var(--gold); font-family: 'Jost', sans-serif;
+      font-size: 1.0rem; color: #ffffff; outline: none;
+      transition: background 0.2s;
     }
-    .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.45); }
+    .form-input:focus, .form-textarea:focus { background: var(--stone-mid); }
     .form-textarea { min-height: 110px; resize: vertical; }
     .form-submit {
       width: 100%; padding: 0.9rem;
@@ -305,30 +307,30 @@
       letter-spacing: 0.15em; text-transform: uppercase;
       cursor: pointer; transition: background 0.3s, transform 0.2s;
     }
-    .form-submit:hover { background: var(--gold); transform: translateY(-1px); }
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
 
     /* ─── LEISTUNGEN ─── */
     #leistungen { background: var(--sand-pale); }
     .karten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     .karte {
-      background: var(--sand-pale); padding: 2.4rem 2rem;
+      background: var(--gold); padding: 2.4rem 2rem;
       border-radius: 2px; position: relative; overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;
-      border: 1px solid var(--sand-soft);
+      border: none;
     }
     .karte::before {
       content:''; position: absolute; top:0;left:0;right:0;height:3px;
-      background: var(--sand); transition: background 0.3s;
+      background: rgba(255,255,255,0.2); transition: background 0.3s;
     }
-    .karte:hover { transform: translateY(-5px); box-shadow: 0 18px 36px var(--shadow); background: var(--sand-soft); }
-    .karte:hover::before { background: var(--gold); }
+    .karte:hover { transform: translateY(-5px); box-shadow: 0 18px 36px var(--shadow); background: var(--stone-mid); }
+    .karte:hover::before { background: rgba(255,255,255,0.4); }
     .karte-icon { font-size: 1.82rem; margin-bottom: 1rem; }
     .karte-title {
       font-family: 'Cormorant Garamond', serif; font-size: 1.27rem;
-      font-weight: 500; color: var(--stone); margin-bottom: 0.5rem;
+      font-weight: 500; color: #ffffff; margin-bottom: 0.5rem;
     }
-    .karte-text { font-size: 0.94rem; line-height: 1.7; color: var(--stone-mid); }
-    .karte-link { font-size: 0.75rem; color: var(--gold); margin-top: 0.8rem; letter-spacing: 0.1em; }
+    .karte-text { font-size: 0.94rem; line-height: 1.7; color: rgba(255,255,255,0.82); }
+    .karte-link { font-size: 0.75rem; color: rgba(255,255,255,0.65); margin-top: 0.8rem; letter-spacing: 0.1em; }
 
     /* ─── ÜBER UNS ─── */
     #ueber { background: var(--white); }
@@ -371,15 +373,15 @@
 
     /* ─── KONTAKT SECTION ─── */
     #zeiten { background: var(--stone); }
-    #zeiten .section-label { color: var(--gold-light); }
+    #zeiten .section-label { color: #ffffff; font-weight: 700; }
     #zeiten .section-title { color: var(--sand-pale); }
     #zeiten .divider { background: var(--gold); }
     .zeiten-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     .kontakt-liste { display: flex; flex-direction: column; gap: 1.5rem; }
     .kontakt-item { display: flex; gap: 1rem; align-items: flex-start; }
     .k-icon { font-size: 1.22rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .k-label { font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.2rem; }
-    .k-text { font-size: 1.0rem; line-height: 1.7; color: rgba(237,228,215,0.72); }
+    .k-label { font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: #ffffff; font-weight: 700; margin-bottom: 0.2rem; }
+    .k-text { font-size: 1.0rem; line-height: 1.7; color: rgba(255,255,255,0.65); }
     .leistungen-liste { list-style: none; margin-top: 1.2rem; }
     .leistungen-liste li {
       padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
@@ -403,16 +405,16 @@
       background: var(--stone); padding: 2.5rem 2rem;
       text-align: center; border-top: 1px solid rgba(200,185,154,0.1);
     }
-    .footer-logo { font-family:'Cormorant Garamond',serif; font-size: 1.52rem; font-style:italic; color:var(--sand); margin-bottom:0.3rem; }
-    .footer-tagline { font-size: 0.8rem; letter-spacing:0.2em; text-transform:uppercase; color: var(--gold-light); margin-bottom:0.6rem; }
-    .footer-copy { font-size: 0.84rem; color: var(--stone-light); }
+    .footer-logo { font-family:'Cormorant Garamond',serif; font-size: 1.52rem; font-style:italic; color:#ffffff; margin-bottom:0.3rem; }
+    .footer-tagline { font-size: 0.8rem; letter-spacing:0.2em; text-transform:uppercase; color: #ffffff; font-weight: 700; margin-bottom:0.6rem; }
+    .footer-copy { font-size: 0.84rem; color: rgba(255,255,255,0.5); }
     .footer-legal-btn {
       background: none; border: none; cursor: pointer;
       font-family: 'Jost', sans-serif; font-size: 0.84rem;
-      color: var(--stone-light); text-decoration: underline;
+      color: rgba(255,255,255,0.5); text-decoration: underline;
       text-underline-offset: 3px; transition: color 0.2s; padding: 0;
     }
-    .footer-legal-btn:hover { color: var(--sand); }
+    .footer-legal-btn:hover { color: #ffffff; }
 
     /* ─── REVEAL ANIMATION ─── */
     .reveal { opacity: 1; transform: none; }
